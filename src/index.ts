@@ -1,2 +1,4 @@
-const s: string = 'Hello Typescript'
-console.log(s)
+import { createApp } from "vue"
+import JSXButton from "./JSXButton";
+
+createApp(JSXButton).mount('#app')
