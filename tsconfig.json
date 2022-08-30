@@ -3,10 +3,9 @@
     "declaration": true /* 生成相关的 '.d.ts' 文件。 */,
     "declarationDir": "./dist/types" /* '.d.ts' 文件输出目录 */,
     "jsx": "preserve",
-    "target": "es5",
     "lib": ["es2015", "es2017", "dom"]
   },
-  "include": ["./**/*.*", "./shims-vue.d.ts"],
+  "include": ["./**/*.*", "./shims-vue.d.ts", "docs/.vitepress/config.ts"],
   "exclude": ["node_modules"],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true
