@@ -28,5 +28,13 @@ export default defineConfig({
       // @ts-ignore
       formats: ["esm", "umd", "iife"],
     }
+  },
+  test: {
+    // enable jest-like global test APIs
+    globals: true,
+    environment: 'happy-dom',
+    transformMode: {
+      web: [/.[tj]sx$/]
+    }
   }
 })

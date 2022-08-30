@@ -1,5 +1,5 @@
 import { defineComponent, PropType, toRefs } from 'vue';
-import 'uno.css';
+// import 'uno.css';
 
 export type ISize = 'small' | 'medium' | 'large';
 export type IColor = 'black' | 'gray' | 'red' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink';
@@ -51,18 +51,18 @@ export default defineComponent({
     return () => (
       <button
         class={`
-        py-${size[props.size].y}
-        px-${size[props.size].x}
-        ${props.round ? 'rounded-full' : 'rounded-lg'}
-        bg-${props.color}-${props.plain ? '100' : '500'}
-        hover:bg-${props.color}-400
-        border-${props.color}-${props.plain ? '500' : '500'}
-        border-1
-        text-${props.plain ? props.color + '-500' : 'white'}
-        text-${size[props.size].text}
-        hover:text-white
-        cursor-pointer
-        transition duration-300 ease-in-out transform hover:scale-105
+        py-${size[props.size].y} 
+        px-${size[props.size].x} 
+        ${props.round ? 'rounded-full' : 'rounded-lg'} 
+        bg-${props.color}-${props.plain ? '100' : '500'} 
+        hover:bg-${props.color}-400 
+        border-${props.color}-${props.plain ? '500' : '500'} 
+        border-1 
+        text-${props.plain ? props.color + '-500' : 'white'} 
+        text-${size[props.size].text} 
+        hover:text-white 
+        cursor-pointer 
+        transition duration-300 ease-in-out transform hover:scale-105 
         mx-1
     `}>
         {props.icon !== '' ? <i class={`i-ic-baseline-${props.icon} p-3`}></i> : ''}
