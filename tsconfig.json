@@ -2,10 +2,9 @@
   "compilerOptions": {
     "declaration": true /* 生成相关的 '.d.ts' 文件。 */,
     "declarationDir": "./dist/types" /* '.d.ts' 文件输出目录 */,
-    "jsx": "preserve",
-    "lib": ["es2015", "es2017", "dom"]
+    "jsx": "preserve"
   },
-  "include": ["./**/*.*", "./shims-vue.d.ts", "docs/.vitepress/config.ts"],
+  "include": ["src/**/*.*", "src/shims-vue.d.ts"],
   "exclude": ["node_modules"],
   "esModuleInterop": true,
   "allowSyntheticDefaultImports": true
