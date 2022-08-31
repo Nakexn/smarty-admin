@@ -6,17 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
-    <h1>Demo IFFE</h1>
+    <h1>🔨 SmartyUI Demo</h1>
     <div id="app"></div>
-    <link rel="stylesheet" href="../../dist/assets/entry.02494948.css" />
-    <script src="../../node_modules/vue/dist/vue.global.js"></script>
-    <script src="../../dist/smarty-ui.iife.js"></script>
-    <script>
-      console.log('111');
-      const { createApp } = Vue;
-      console.log('vue', Vue);
-      console.log('SmartyUI', SmartyUI);
+    <script type="module">
+      import style from 'smarty-ui-vite/dist/assets/entry.02494948.css';
+      import { createApp } from 'vue/dist/vue.esm-browser.js';
+      import SmartyUI, { SFCButton, JSXButton } from 'smarty-ui-vite/dist/smarty-ui.esm.js';
       createApp({
         template: `
         <div style="margin-bottom:20px;">
@@ -55,7 +52,7 @@
         </div>
     `
       })
-        .use(SmartyUI.default)
+        .use(SmartyUI)
         .mount('#app');
     </script>
   </body>
