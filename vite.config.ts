@@ -6,7 +6,7 @@ import Unocss from './config/unocss'
 // https://vitejs.dev/config/
 
 const rollupOptions = {
-  external: ["vue", "vue-router"],
+  external: ["vue"],
   output: {
     globals: {
       vue: 'Vue'
@@ -18,7 +18,9 @@ export default defineConfig({
   plugins: [vue(), vueJsx({}), Unocss()],
   build: {
     rollupOptions,
-    minify: false,
+    minify: 'terser', // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独 source文件
+    brotliSize: true,  // 生成压缩大小报告
     cssCodeSplit: true,
     lib: {
       entry: './src/entry.ts',
