@@ -1,8 +1,9 @@
 {
-  "name": "smarty-ui-vite",
+  "name": "smarty-ui-vite-nakx",
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "module": "./dist/smarty-ui.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,6 +18,10 @@
   "repository": {
     "type": "git",
     "url": "https://gitee.com/yaoru/smarty-ui-vite"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "author": "",
   "license": "ISC",
