@@ -1,6 +1,6 @@
 {
   "name": "smarty-ui-vite",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "test": "vitest",
     "test:run": "vitest run",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:dev": "vitepress dev docs --config ../vite.config.ts",
+    "docs:build": "vitepress build docs --config ../vite.config.ts",
+    "docs:serve": "vitepress serve docs --config ../vite.config.ts"
   },
   "repository": {
     "type": "git",
