@@ -23,7 +23,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "author": "",
+  "author": "nakx",
   "license": "ISC",
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
