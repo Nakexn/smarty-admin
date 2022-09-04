@@ -1,5 +1,5 @@
-import { presetUno, presetAttributify, presetIcons } from "unocss"
-import Unocss from "unocss/vite"
+import { presetUno, presetAttributify, presetIcons } from "unocss";
+import Unocss from "unocss/vite";
 
 const colors = [
   "white",
@@ -12,10 +12,10 @@ const colors = [
   "indigo",
   "purple",
   "pink",
-]
+];
 
 const safelist = [
-  'text-white',
+  "text-white",
   ...["rounded-full", "rounded-lg"],
   ...colors.map((v) => `bg-${v}-100`),
   ...colors.map((v) => `bg-${v}-400`),
@@ -41,13 +41,14 @@ const safelist = [
     "add",
     "share",
   ].map((v) => `i-ic-baseline-${v}`),
-]
+];
 
-export default () => Unocss({
-  safelist,
-  presets: [
-    presetUno(),
-    presetAttributify(),
-    presetIcons() // 添加图标预设
-  ]
-})
+export default () =>
+  Unocss({
+    safelist,
+    presets: [
+      presetUno(),
+      presetAttributify(),
+      presetIcons(), // 添加图标预设
+    ],
+  });

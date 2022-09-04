@@ -6,7 +6,9 @@
   "module": "./dist/smarty-ui.esm.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm build:components",
+    "build:all": "vite build",
+    "build:components": "esno ./scripts/build.ts",
     "lint": "eslint --fix --ext .ts,.tsx,.vue src",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "test": "vitest",
@@ -39,6 +41,7 @@
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.4.0",
+    "esno": "^0.16.3",
     "happy-dom": "6.0.4",
     "prettier": "^2.7.1",
     "terser": "5.4.0",
@@ -49,6 +52,7 @@
     "vitest": "0.21.1"
   },
   "dependencies": {
+    "fs-extra": "^10.1.0",
     "typescript": "^4.8.2",
     "vue": "3.2.37"
   }

@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, UserConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import Unocss from "./config/unocss";
@@ -14,7 +14,7 @@ const rollupOptions = {
   },
 };
 
-export default defineConfig({
+export const config = {
   plugins: [vue(), vueJsx({}), Unocss()],
   build: {
     rollupOptions,
@@ -30,6 +30,7 @@ export default defineConfig({
       // @ts-ignore
       formats: ["esm", "umd", "iife"],
     },
+    outDir: "./dist",
   },
   test: {
     // enable jest-like global test APIs
@@ -39,4 +40,6 @@ export default defineConfig({
       web: [/.[tj]sx$/],
     },
   },
-});
+};
+
+export default defineConfig(config as UserConfig);
